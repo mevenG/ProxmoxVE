@@ -129,6 +129,23 @@ ssh_check() {
   fi
 }
 
+generate_app_name() {
+    if ! command -v figlet &> /dev/null; then
+        sudo apt-get install -y figlet &> /dev/null
+    fi
+
+    # Den Wert der APP-Variable annehmen (kann angepasst werden)
+    APP="$1"
+
+    # ASCII-Art erzeugen und formatieren
+    ascii_art=$(figlet -f slant "$APP")
+
+    # Ausgabe als cat <<EOF
+    cat <<EOF
+$ascii_art
+EOF
+}
+
 # This function displays the default values for various settings.
 echo_default() {
   echo -e "${DGN}Using Distribution: ${BGN}$var_os${CL}"
