@@ -134,13 +134,13 @@ generate_app_name() {
         sudo apt-get install -y figlet &> /dev/null
     fi
 
-    # Den Wert der APP-Variable annehmen (kann angepasst werden)
+    # Use the Value of the APP Variable
     APP="$1"
 
-    # ASCII-Art erzeugen und formatieren
+    # Create and Formatting ASCII
     ascii_art=$(figlet -f slant "$APP")
 
-    # Ausgabe als cat <<EOF
+    # Output es cat <<EOF
     cat <<EOF
 $ascii_art
 EOF
