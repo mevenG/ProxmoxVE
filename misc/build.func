@@ -140,7 +140,6 @@ generate_app_name() {
     # Create and Formatting ASCII
     ascii_art=$(figlet -f slant "$APP")
 
-    # Output es cat <<EOF
     cat <<EOF
 $ascii_art
 EOF
