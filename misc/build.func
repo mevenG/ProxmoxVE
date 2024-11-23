@@ -129,7 +129,7 @@ ssh_check() {
   fi
 }
 
-generate_app_name() {
+generate_app_header() {
     if ! command -v figlet &> /dev/null; then
         sudo apt-get install -y figlet &> /dev/null
     fi
